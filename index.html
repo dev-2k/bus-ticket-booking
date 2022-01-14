@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- bootsrtap cdn  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- font awesome cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" /> <!-- custom stylesheet  -->
+  <link rel="stylesheet" href="./css/seat.css">
+  <link rel="stylesheet" href="./css/cards.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+  <!-- navbar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="./images/bird.png" width="30" height="30" class="d-inline-block align-top mr-4" alt="company logo">
+      Bus Ticket
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#price">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#detail">Details</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Search Section -->
+  <section>
+    <article>
+      <div class="search-bar">
+        <center>
+          <h2>Search Bus</h2>
+          <input type="text" list="city">
+          <datalist id="city">
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Shimla</option>
+            <option>Chandigarh</option>
+            <option>Bangalore</option>
+            <option>Hyderabad</option>
+            <option>Ahmedabad</option>
+            <option>Pune</option>
+            <option>Lukhnow</option>
+            <option>Agra</option>
+            <option>Amritsar</option>
+            <option>Chennai</option>
+            <option>Ludhiana</option>
+            <option>Jaipur</option>
+
+          </datalist>
+          <input type="text" list="city">
+          <input type="date">
+          <a href="#" class="btn btn-primary">Search</a>
+        </center>
+      </div>
+
+    </article>
+  </section>
+  <!-- card section  -->
+
+  <section id="detail" class="busdetails container mt-5 py-5">
+    <article class="postcard dark blue mx-auto">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="./assets/isoview.jpg" alt="Image Title" />
+      </a>
+      <div class="postcard__text">
+        <h1 class="postcard__title blue"><a href="#">Bus Company</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">
+          Volvo Multi-Axle A/C Seater Semi Sleeper (2+1) <br>
+          <ul class="mt-2">
+            <li><i class="fa fa-map-marker mr-2"></i> Destination A to Destination B</li>
+            <li><i class="fas fa-chair mr-2"></i>40 Seats Available</li>
+            <li><i class="far fa-hourglass mr-2"></i>12:30 to 13:25</li>
+          </ul>
+        </div>
+        <ul id="price" class="postcard__tagbox">
+          <li class="tag__item"><i class="fa fa-clock mr-2"></i>55 mins.</li>
+          <li class="tag__item ">
+            <i class="fa fa-rupee-sign mr-2"></i>550
+          </li>
+          <li class="tag__item play blue" id=".seat1" onclick="showmenu(this.id)"><a><i class="fa fa-tag mr-2"></i>Buy
+              Tickets</a></li>
+        </ul>
+      </div>
+    </article>
+    <section class="bus-seat container book seat1">
+      <div class="row my-5 p-3 mx-auto">
+        <div class="arrangment col-lg-6">
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+        </div>
+        <div class="bill col-lg-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Destination A to B</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Company Name</h6>
+              <p class="card-text">
+              <p> <span class="" id="count">0</span> Tickets Selected </p>
+              <p> Final Ammount <i class=""></i><span id="total" class="">0</span></p>
+              </p>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- !!!!!!!!!!!!!  -->
+    <article class="postcard light yellow">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="./assets/empty.jpg" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a href="#">Bus Company</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">
+          Volvo A/C Seater Pushback (2+2) <br>
+          <ul class="mt-2">
+            <li><i class="fa fa-map-marker mr-2"></i> Destination A to Destination B</li>
+            <li><i class="fas fa-chair mr-2"></i>40 Seats Available</li>
+            <li><i class="far fa-hourglass mr-2"></i>12:30 to 13:25</li>
+          </ul>
+        </div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+          <li class="tag__item"><i class="fa fa-rupee-sign mr-2"></i>600</li>
+          <li class="tag__item play yellow" onclick="showmenu(this.id)" id=".seat2">
+            <a><i class="fa fa-tag mr-2"></i>Buy Tickets</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <section class="bus-seat container book seat2">
+      <div class="row my-5 p-3 mx-auto">
+        <div class="arrangment col-lg-6">
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+        </div>
+        <div class="bill col-lg-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Destination A to B</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Company Name</h6>
+              <p class="card-text">
+              <p> <span class="" id="count">0</span> Tickets Selected </p>
+              <p> Final Ammount <i class=""></i><span id="total" class="">0</span></p>
+              </p>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <article class="postcard dark red mx-auto">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="./assets/busstop.jpg" alt="Image Title" />
+      </a>
+      <div class="postcard__text">
+        <h1 class="postcard__title red"><a href="#">Bus Company</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">
+          Volvo AC Seater (2+2) <br>
+          <ul class="mt-2">
+            <li><i class="fa fa-map-marker mr-2"></i> Destination A to Destination B</li>
+            <li><i class="fas fa-chair mr-2"></i>40 Seats Available</li>
+            <li><i class="far fa-hourglass mr-2"></i>12:30 to 13:25</li>
+          </ul>
+        </div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item"><i class="fa fa-clock mr-2"></i>55 mins.</li>
+          <li class="tag__item ">
+            <i class="fa fa-rupee-sign mr-2"></i>550
+          </li>
+          <li class="tag__item play red" onclick="showmenu(this.id)" id=".seat3"><a><i class="fa fa-tag mr-2"></i>Buy
+              Tickets</a></li>
+        </ul>
+      </div>
+    </article>
+    <section class="bus-seat container book seat3">
+      <div class="row my-5 p-3 mx-auto">
+        <div class="arrangment col-lg-6">
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+        </div>
+        <div class="bill col-lg-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Destination A to B</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Company Name</h6>
+              <p class="card-text">
+              <p> <span class="" id="count">0</span> Tickets Selected </p>
+              <p> Final Ammount <i class=""></i><span id="total" class="">0</span></p>
+              </p>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <article class="postcard light green">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="./assets/isoview.jpg" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title green"><a href="#">Bus Company</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">Scania Multi-Axle AC Semi Sleeper (2+2) <br>
+          <ul class="mt-2">
+            <li><i class="fa fa-map-marker mr-2"></i> Destination A to Destination B</li>
+            <li><i class="fas fa-chair mr-2"></i>40 Seats Available</li>
+            <li><i class="far fa-hourglass mr-2"></i>12:30 to 13:25</li>
+          </ul>
+        </div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+          <li class="tag__item"><i class="fa fa-rupee-sign mr-2"></i>600</li>
+          <li class="tag__item play green" id=".seat4" onclick="showmenu(this.id)">
+            <a><i class="fa fa-tag mr-2"></i>Buy Tickets</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <section class="bus-seat container book seat4">
+      <div class="row my-5 p-3 mx-auto">
+        <div class="arrangment col-lg-6">
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="rows">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+        </div>
+        <div class="bill col-lg-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Destination A to B</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Company Name</h6>
+              <p class="card-text">
+              <p> <span class="" id="count">0</span> Tickets Selected </p>
+              <p> Final Ammount <i class=""></i><span id="total" class="">0</span></p>
+              </p>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </section>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Payment Sucess</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Payment was success!! your tickets have been booked!! <br>
+          Have a great trip!!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bootstrap js cdn  -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>

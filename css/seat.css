@@ -1,0 +1,48 @@
+.rows {
+    display: flex;
+  }
+  .seat {
+    background-color: #18151f;
+    height: 20px;
+    width: 22px;
+    margin: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .seat.selected {
+    background-color: #70c7cf;
+  }
+  
+  .seat.occupied {  
+    background-color: #fff;
+  }
+  
+  .seat:nth-of-type(3) {
+    margin-right: 18px;
+  }
+  
+  .seat:nth-last-of-type(3) {
+    margin-left: 18px;
+  }
+  
+  .seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  
+  .showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+  }
+
+.arrangment{
+    /* border: 3px solid #000; */
+    width: max-content;
+    padding: 1.2rem;
+}
+
+.bus-seat{
+    background-color: #eeeded;
+    width: 70%;
+}
